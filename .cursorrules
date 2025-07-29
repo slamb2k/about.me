@@ -1,0 +1,191 @@
+# Cursor Rules for TDD Workflow and Best Practices
+
+## TDD (Test-Driven Development) Workflow
+
+### 1. Red-Green-Refactor Cycle
+- Always write tests FIRST before implementing any feature
+- Follow the Red-Green-Refactor cycle:
+  - **Red**: Write a failing test that describes the desired behavior
+  - **Green**: Write the minimum code to make the test pass
+  - **Refactor**: Clean up the code while keeping tests green
+
+### 2. Test-First Development
+- Write unit tests before implementing any function or component
+- Tests should describe the expected behavior, not the implementation
+- Use descriptive test names that explain what is being tested
+- Follow the pattern: "Given [context], When [action], Then [expected result]"
+
+### 3. Test Structure
+- Use Jest and React Testing Library for React components
+- Structure tests with describe/it blocks for clarity
+- Mock external dependencies appropriately
+- Test both happy path and edge cases
+
+## Code Quality Standards
+
+### 1. TypeScript Best Practices
+- Use strict TypeScript configuration
+- Define proper interfaces and types for all data structures
+- Avoid `any` type - use proper typing
+- Use union types and generics where appropriate
+
+### 2. React Best Practices
+- Use functional components with hooks
+- Keep components small and focused (single responsibility)
+- Use proper prop types and default values
+- Implement proper error boundaries
+- Follow React naming conventions
+
+### 3. Code Organization
+- Use meaningful variable and function names
+- Keep functions small and focused
+- Use consistent formatting and indentation
+- Add JSDoc comments for complex functions
+- Group related functionality together
+
+## File Structure Guidelines
+
+### 1. Component Organization
+- Place components in appropriate directories
+- Use index files for clean imports
+- Separate business logic from UI components
+- Create reusable components when possible
+
+### 2. Testing Structure
+- Mirror test file structure to source code structure
+- Use `.test.tsx` or `.spec.tsx` extensions
+- Place test utilities in `__tests__` directories or alongside source files
+
+## Git Workflow
+
+### 1. Commit Standards
+- Write descriptive commit messages
+- Use conventional commit format: `type(scope): description`
+- Keep commits atomic and focused
+- Reference issues/features in commit messages
+
+### 2. Branch Strategy
+- Use feature branches for new development
+- Create branches with descriptive names: `feature/user-authentication`
+- Keep main branch stable and deployable
+
+## Performance and Security
+
+### 1. Performance
+- Optimize bundle size and loading times
+- Use React.memo for expensive components
+- Implement proper lazy loading
+- Monitor and optimize render performance
+
+### 2. Security
+- Validate all user inputs
+- Sanitize data before rendering
+- Use HTTPS in production
+- Follow OWASP security guidelines
+
+## Documentation
+
+### 1. Code Documentation
+- Document complex business logic
+- Add README files for major components
+- Keep documentation up to date
+- Use TypeScript for self-documenting code
+
+### 2. API Documentation
+- Document all API endpoints
+- Include request/response examples
+- Specify error codes and messages
+
+## Testing Guidelines
+
+### 1. Unit Tests
+- Test individual functions and components
+- Mock external dependencies
+- Test edge cases and error conditions
+- Aim for high test coverage (80%+)
+
+### 2. Integration Tests
+- Test component interactions
+- Test API integrations
+- Test user workflows end-to-end
+
+### 3. Test Naming
+- Use descriptive test names
+- Follow the pattern: "should [expected behavior] when [condition]"
+- Group related tests with describe blocks
+
+## Code Review Checklist
+
+### Before Submitting Code
+- [ ] All tests pass
+- [ ] New features have corresponding tests
+- [ ] Code follows TypeScript best practices
+- [ ] Components are properly typed
+- [ ] No console.log statements in production code
+- [ ] Proper error handling implemented
+- [ ] Code is properly formatted
+- [ ] No unused imports or variables
+
+## Development Environment
+
+### 1. IDE Setup
+- Use ESLint and Prettier for code formatting
+- Enable TypeScript strict mode
+- Use proper file extensions (.tsx for React components)
+- Configure proper import paths
+
+### 2. Dependencies
+- Keep dependencies up to date
+- Use exact versions for critical dependencies
+- Regularly audit for security vulnerabilities
+- Document why specific dependencies are needed
+
+## Accessibility (a11y)
+
+### 1. Standards
+- Follow WCAG 2.1 guidelines
+- Use semantic HTML elements
+- Provide proper ARIA labels
+- Ensure keyboard navigation works
+- Test with screen readers
+
+### 2. Testing
+- Include accessibility tests in test suite
+- Use tools like axe-core for automated testing
+- Test with keyboard-only navigation
+
+## Error Handling
+
+### 1. Principles
+- Handle errors gracefully
+- Provide meaningful error messages
+- Log errors appropriately
+- Implement proper fallbacks
+- Use error boundaries for React components
+
+### 2. Testing Errors
+- Test error conditions
+- Verify error messages are user-friendly
+- Test error recovery mechanisms
+
+## Performance Monitoring
+
+### 1. Metrics
+- Monitor bundle size
+- Track loading times
+- Monitor runtime performance
+- Use React DevTools for component analysis
+
+### 2. Optimization
+- Implement code splitting
+- Use React.lazy for component lazy loading
+- Optimize images and assets
+- Minimize re-renders
+
+## Remember
+- Always write tests first (TDD)
+- Keep code simple and readable
+- Refactor regularly
+- Document important decisions
+- Review code before merging
+- Stay up to date with best practices 
